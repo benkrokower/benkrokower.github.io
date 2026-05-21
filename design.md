@@ -1,8 +1,6 @@
 # My CMU Game Website Plan
 
 ## Student Information
-- **Name:** Your Name Here
-- **Class Period:** Your Class Period
 - **Project Title:** My CMU Game Website
 
 ---
