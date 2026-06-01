@@ -1,0 +1,23 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+}
+h1 {
+    border-style: double;
+    background-color: skyblue;
+    text-align: center;
+}
+.game-container {
+    border-width: 10px;
+    border-style: double;
+    border-color: blue;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table {
+    border-style: groove;
+    border-width: 5px;
+    border-color: darkgray;
+}

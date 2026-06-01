@@ -1,0 +1,97 @@
+/* colors: #111111, #cccccc, #0d0d0d, #2a2a2a, #3ddc5a, #666666, #55ee70 */
+body {
+   background-color: #111111;
+   color: #cccccc;
+   font-family: "Montserrat", sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+.hero {
+   text-align: center;
+   padding: 60px 20px;
+}
+
+.hero h1 {
+   color: #3ddc5a;
+   font-size: 56px;
+   font-weight: 900;
+   margin-bottom: 10px;
+}
+
+.hero-sub {
+   color: #666666;
+   font-size: 16px;
+   margin-bottom: 30px;
+}
+
+.btn {
+   background-color: #3ddc5a;
+   color: black;
+   font-family: "Montserrat", sans-serif;
+   font-weight: bold;
+   font-size: 14px;
+   text-decoration: none;
+   padding: 10px 30px;
+   display: inline-block;
+}
+
+.btn:hover {
+   background-color: #55ee70;
+}
+
+.info {
+   display: flex;
+}
+
+.card {
+   background-color: #131313;
+   padding: 30px;
+   width: 50%;
+}
+
+.card h2 {
+   color: #3ddc5a;
+   font-size: 14px;
+   margin-bottom: 10px;
+}
+
+.card p {
+   color: #666666;
+   font-size: 14px;
+   line-height: 1.7;
+}
+
+.game {
+   background-color: #0d0d0d;
+   padding: 40px 20px;
+   text-align: center;
+}
+
+.game h2 {
+   color: #3ddc5a;
+   font-size: 14px;
+   margin-bottom: 30px;
+}
+
+.game-wrapper iframe {
+   border: 1px solid #2a2a2a;
+}
+
+.developer {
+   padding: 40px 20px;
+   max-width: 640px;
+   margin: 0 auto;
+}
+
+.developer h2 {
+   color: #3ddc5a;
+   font-size: 14px;
+   margin-bottom: 10px;
+}
+
+.developer p {
+   color: #666666;
+   font-size: 14px;
+   line-height: 1.7;
+}
