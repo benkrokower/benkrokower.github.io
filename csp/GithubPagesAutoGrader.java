@@ -539,7 +539,8 @@ public class GithubPagesAutoGrader {
                     .append(escapeHtml(r.username))
                     .append("</span><br><a href=\"")
                     .append(escapeHtml(r.humanSiteUrl))
-                    .append("\" target=\"_blank\">Open human site</a></td>");
+                    .append("\" target=\"_blank\">Open human site</a>")                                        
+                    .append("</span><br><a href=\"")
                     .append(escapeHtml(r.aiSiteUrl))
                     .append("\" target=\"_blank\">Open ai site</a></td>");
 
@@ -794,7 +795,8 @@ public class GithubPagesAutoGrader {
     private static class Result {
         String nickname;
         String username;
-        String liveSiteUrl = "";
+        String humanSiteUrl = "";
+        String aiSiteUrl = "";
 
         boolean downloadSuccess = false;
         String downloadMessage = "";

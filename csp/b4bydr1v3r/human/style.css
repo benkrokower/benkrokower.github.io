@@ -1,0 +1,53 @@
+/* GENERAL STYLES */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    background-color: #ff6600;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* NAVIGATION */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* SECTIONS */
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #ff6600;
+}
+
+/* IMAGE */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
