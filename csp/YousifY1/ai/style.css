@@ -8,13 +8,13 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #FFFFFF;
-    color: #000000;
+    color: #0052CC;
     line-height: 1.6;
 }
 
 /* ===== HEADER & NAVIGATION ===== */
 .header {
-    background-color: #D9D9D9;
+    background-color: #E3F2FD;
     position: sticky;
     top: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -37,7 +37,7 @@ body {
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #FF0000;
+    color: #0052CC;
 }
 
 .nav-links {
@@ -48,18 +48,18 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #000000;
+    color: #0052CC;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #555555;
+    color: #1976D2;
 }
 
 /* ===== HERO SECTION ===== */
 .hero {
-    background: linear-gradient(135deg, #D9D9D9, #FFFFFF);
+    background: linear-gradient(135deg, #E3F2FD, #FFFFFF);
     padding: 6rem 2rem;
     text-align: center;
 }
@@ -67,17 +67,17 @@ body {
 .hero-content h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #000000;
+    color: #0052CC;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #555555;
+    color: #1976D2;
 }
 
 .cta-button {
-    background-color: #000000;
+    background-color: #0052CC;
     color: #FFFFFF;
     border: none;
     padding: 1rem 2rem;
@@ -88,7 +88,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #333333;
+    background-color: #1976D2;
 }
 
 /* ===== INFO SECTION ===== */
@@ -106,7 +106,7 @@ body {
 }
 
 .info-card {
-    background-color: #D9D9D9;
+    background-color: #E3F2FD;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -120,16 +120,16 @@ body {
 .info-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #000000;
+    color: #0052CC;
 }
 
 .info-card p {
-    color: #333333;
+    color: #1976D2;
 }
 
 .info-card ul {
     margin-left: 1.5rem;
-    color: #333333;
+    color: #1976D2;
 }
 
 .info-card li {
@@ -142,7 +142,7 @@ body {
 }
 
 .reset-button {
-    background-color: #555555;
+    background-color: #1976D2;
     color: #FFFFFF;
     border: none;
     padding: 0.7rem 1.5rem;
@@ -153,20 +153,20 @@ body {
 }
 
 .reset-button:hover {
-    background-color: #333333;
+    background-color: #0052CC;
 }
 
 /* ===== GAME SECTION ===== */
 .game-section {
     padding: 4rem 2rem;
-    background-color: #F5F5F5;
+    background-color: #F0F7FF;
     text-align: center;
 }
 
 .game-section h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    color: #000000;
+    color: #0052CC;
 }
 
 .game-container {
@@ -184,12 +184,12 @@ body {
 }
 
 .game-note {
-    color: #666666;
+    color: #1976D2;
     margin-bottom: 1.5rem;
 }
 
 .play-button {
-    background-color: #000000;
+    background-color: #0052CC;
     color: #FFFFFF;
     border: none;
     padding: 1rem 2rem;
@@ -200,20 +200,20 @@ body {
 }
 
 .play-button:hover {
-    background-color: #333333;
+    background-color: #1976D2;
 }
 
 /* ===== DEVELOPER SECTION ===== */
 .developer-section {
     padding: 4rem 2rem;
-    background-color: #D9D9D9;
+    background-color: #E3F2FD;
 }
 
 .developer-section h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
-    color: #000000;
+    color: #0052CC;
 }
 
 .developer-content {
@@ -223,14 +223,14 @@ body {
 
 .developer-content p {
     margin-bottom: 1.5rem;
-    color: #333333;
+    color: #1976D2;
     font-size: 1rem;
 }
 
 .developer-content h3 {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    color: #000000;
+    color: #0052CC;
 }
 
 .contact-form {
@@ -243,7 +243,7 @@ body {
 .contact-form input,
 .contact-form textarea {
     padding: 0.8rem;
-    border: 1px solid #999999;
+    border: 1px solid #90CAF9;
     border-radius: 5px;
     font-family: 'Arial', sans-serif;
     font-size: 1rem;
@@ -252,12 +252,12 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #000000;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-color: #0052CC;
+    box-shadow: 0 0 5px rgba(5, 82, 204, 0.3);
 }
 
 .submit-button {
-    background-color: #000000;
+    background-color: #0052CC;
     color: #FFFFFF;
     border: none;
     padding: 1rem;
@@ -268,26 +268,26 @@ body {
 }
 
 .submit-button:hover {
-    background-color: #333333;
+    background-color: #1976D2;
 }
 
 #form-message {
     text-align: center;
-    color: #000000;
+    color: #0052CC;
     font-weight: bold;
 }
 
 /* ===== FOOTER ===== */
 .footer {
-    background-color: #D9D9D9;
+    background-color: #E3F2FD;
     padding: 2rem;
     text-align: center;
-    color: #333333;
-    border-top: 1px solid #CCCCCC;
+    color: #1976D2;
+    border-top: 1px solid #90CAF9;
 }
 
 .footer a {
-    color: #000000;
+    color: #0052CC;
     text-decoration: none;
 }
 
