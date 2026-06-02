@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The High-Five Game | CMU Game Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION HEADER -->
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">The High-Five</h1>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#how-to-play">How to Play</a>
+                <a href="#high-scores">High Scores</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>The High-Five Game</h2>
+            <p>Can you keep the stick figure happy? Make the right choices and avoid upsetting them!</p>
+            <a href="#play-game" class="btn-play">Play Now</a>
+        </div>
+    </section>
+
+    <!-- GAME INFO TABS -->
+    <section class="info-tabs">
+        <div class="container">
+            <div class="tab-content">
+                <div class="tab">
+                    <h3>📖 About the Game</h3>
+                    <p>The High-Five is an interactive game where your decisions matter. Each choice you make affects the stick figure's mood. Can you keep them happy, or will they leave upset?</p>
+                </div>
+                <div class="tab">
+                    <h3>🎮 How to Play</h3>
+                    <p><strong>Controls:</strong> Click or tap the buttons to make choices. Each decision changes the stick figure's emotion. Try different combinations to discover all outcomes!</p>
+                </div>
+                <div class="tab">
+                    <h3>🏆 High Scores</h3>
+                    <p id="high-score-display">Best Score: 0 points</p>
+                    <button class="btn-secondary" onclick="resetScores()">Reset Scores</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLAYABLE GAME AREA -->
+    <section class="game-section" id="play-game">
+        <div class="container">
+            <h2>Play The High-Five</h2>
+            <div class="game-embed">
+                <iframe src="https://academy.cs.cmu.edu/sharing/blueFrog493066" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p class="game-note">Embedded game above. Having trouble? <a href="https://academy.cs.cmu.edu/sharing/blueFrog493066" target="_blank">Play in a new window</a></p>
+        </div>
+    </section>
+
+    <!-- ABOUT THE DEVELOPER -->
+    <section class="about-developer" id="about">
+        <div class="container">
+            <h2>About the Developer</h2>
+            <p>Hello! I'm a student at Carnegie Mellon University studying game design and interactive media. I created <strong>The High-Five</strong> to explore how player choices can shape emotional storytelling in games.</p>
+            <p>This project taught me about game mechanics, player engagement, and how small interactions can create meaningful experiences.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT & FEEDBACK -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Share Your Feedback</h2>
+            <form class="feedback-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <textarea placeholder="What did you think of the game?" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Send Feedback</button>
+            </form>
+            <p id="feedback-message"></p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 The High-Five Game. Made with ❤️ at CMU.</p>
+            <p><a href="https://academy.cs.cmu.edu/sharing/blueFrog493066" target="_blank">Original Game Link</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
