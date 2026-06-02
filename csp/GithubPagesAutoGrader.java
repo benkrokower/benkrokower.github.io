@@ -538,8 +538,10 @@ public class GithubPagesAutoGrader {
                     .append("</strong><br><span class=\"small\">")
                     .append(escapeHtml(r.username))
                     .append("</span><br><a href=\"")
-                    .append(escapeHtml(r.liveSiteUrl))
-                    .append("\" target=\"_blank\">Open live site</a></td>");
+                    .append(escapeHtml(r.humanSiteUrl))
+                    .append("\" target=\"_blank\">Open human site</a></td>");
+                    .append(escapeHtml(r.aiSiteUrl))
+                    .append("\" target=\"_blank\">Open ai site</a></td>");
 
             html.append("<td>")
                     .append(r.downloadSuccess ? "<span class=\"good\">Downloaded</span>" : "<span class=\"bad\">Failed</span>")
@@ -838,7 +840,9 @@ public class GithubPagesAutoGrader {
         Result(String nickname, String username) {
              this.nickname = nickname;
              this.username = username;
-             this.liveSiteUrl = "https://" + username + ".github.io";
+             this.humanSiteUrl = "https://ballardcs.krokower.com/csp/" + username + "/human";
+
+             this.aiSiteUrl = "https://ballardcs.krokower.com/csp/" + username + "/ai";
          }
     }
 }
