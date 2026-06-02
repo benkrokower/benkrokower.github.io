@@ -1,20 +1,4 @@
-/* ============================================
-   COLOR VARIABLES
-   ============================================ */
-
-:root {
-    --primary-color: #FF6B6B;      /* Vibrant Red */
-    --secondary-color: #4ECDC4;    /* Teal */
-    --accent-color: #FFE66D;       /* Bright Yellow */
-    --dark-color: #2C3E50;         /* Dark Blue-Gray */
-    --light-bg: #F7F9FC;           /* Light Blue */
-    --text-dark: #2C3E50;
-}
-
-/* ============================================
-   RESET & GLOBAL STYLES
-   ============================================ */
-
+/* ===== RESET & GENERAL STYLES ===== */
 * {
     margin: 0;
     padding: 0;
@@ -22,356 +6,297 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
     line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--light-bg);
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* ============================================
-   NAVIGATION BAR
-   ============================================ */
-
-.navbar {
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    padding: 1rem 0;
+/* ===== HEADER & NAVIGATION ===== */
+.header {
+    background-color: #D9D9D9;
     position: sticky;
     top: 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 100;
 }
 
-.navbar .container {
+.navbar {
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
 }
 
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #FF0000;
 }
 
 .nav-links {
     display: flex;
+    list-style: none;
     gap: 2rem;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #000000;
     font-weight: 500;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    opacity: 0.8;
-    transform: translateY(-2px);
+    color: #555555;
 }
 
-/* ============================================
-   HERO SECTION
-   ============================================ */
-
+/* ===== HERO SECTION ===== */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, #D9D9D9, #FFFFFF);
     padding: 6rem 2rem;
     text-align: center;
-    border-bottom: 5px solid var(--accent-color);
 }
 
 .hero-content h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #FFFFFF;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    color: #000000;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    color: #555555;
+}
+
+.cta-button {
+    background-color: #000000;
     color: #FFFFFF;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.btn-play {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--dark-color);
-    padding: 1rem 2.5rem;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
     border: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.btn-play:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+.cta-button:hover {
+    background-color: #333333;
 }
 
-/* ============================================
-   INFO TABS SECTION
-   ============================================ */
-
-.info-tabs {
-    padding: 3rem 2rem;
-    background-color: var(--light-bg);
+/* ===== INFO SECTION ===== */
+.info-section {
+    padding: 4rem 2rem;
+    background-color: #FFFFFF;
 }
 
-.tab-content {
+.info-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.tab {
-    background: linear-gradient(135deg, #FFFFFF 0%, #F0F8FF 100%);
+.info-card {
+    background-color: #D9D9D9;
     padding: 2rem;
-    border-radius: 12px;
-    border-left: 6px solid var(--primary-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.tab::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    background: var(--accent-color);
-    opacity: 0.1;
-    border-radius: 50%;
-    transform: translate(30%, -30%);
+.info-card:hover {
+    transform: translateY(-5px);
 }
 
-.tab:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border-left-color: var(--secondary-color);
-}
-
-.tab h3 {
+.info-card h3 {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    position: relative;
-    z-index: 1;
+    color: #000000;
 }
 
-.tab p {
-    color: var(--text-dark);
-    font-size: 0.95rem;
-    position: relative;
-    z-index: 1;
+.info-card p {
+    color: #333333;
 }
 
-/* ============================================
-   GAME SECTION
-   ============================================ */
+.info-card ul {
+    margin-left: 1.5rem;
+    color: #333333;
+}
 
+.info-card li {
+    margin-bottom: 0.5rem;
+}
+
+#score-display {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.reset-button {
+    background-color: #555555;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.reset-button:hover {
+    background-color: #333333;
+}
+
+/* ===== GAME SECTION ===== */
 .game-section {
-    padding: 3rem 2rem;
-    background: linear-gradient(180deg, var(--light-bg) 0%, #FFFFFF 100%);
+    padding: 4rem 2rem;
+    background-color: #F5F5F5;
+    text-align: center;
 }
 
 .game-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
     font-size: 2rem;
-    color: var(--primary-color);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    color: #000000;
 }
 
-.game-embed {
-    margin-bottom: 1.5rem;
-    border-radius: 12px;
+.game-container {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border: 4px solid var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.game-embed iframe {
-    display: block;
+.game-container iframe {
+    width: 100%;
+    height: 400px;
     border: none;
 }
 
 .game-note {
-    text-align: center;
-    color: var(--text-dark);
-    font-size: 0.9rem;
-}
-
-.game-note a {
-    color: var(--primary-color);
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-/* ============================================
-   ABOUT DEVELOPER SECTION
-   ============================================ */
-
-.about-developer {
-    padding: 3rem 2rem;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #4ECDC4 100%);
-    text-align: center;
-}
-
-.about-developer h2 {
-    font-size: 2rem;
+    color: #666666;
     margin-bottom: 1.5rem;
-    color: #FFFFFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.about-developer p {
+.play-button {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    padding: 1rem 2rem;
     font-size: 1rem;
-    color: #FFFFFF;
-    max-width: 700px;
-    margin: 0 auto 1rem;
-    line-height: 1.8;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* ============================================
-   CONTACT & FEEDBACK SECTION
-   ============================================ */
-
-.contact-section {
-    padding: 3rem 2rem;
-    background: linear-gradient(135deg, var(--accent-color) 0%, #FFD93D 100%);
+.play-button:hover {
+    background-color: #333333;
 }
 
-.contact-section h2 {
-    text-align: center;
+/* ===== DEVELOPER SECTION ===== */
+.developer-section {
+    padding: 4rem 2rem;
+    background-color: #D9D9D9;
+}
+
+.developer-section h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    color: var(--dark-color);
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    color: #000000;
 }
 
-.feedback-form {
-    max-width: 600px;
-    margin: 0 auto 1.5rem;
+.developer-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.developer-content p {
+    margin-bottom: 1.5rem;
+    color: #333333;
+    font-size: 1rem;
+}
+
+.developer-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.contact-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-.feedback-form input,
-.feedback-form textarea {
+.contact-form input,
+.contact-form textarea {
     padding: 0.8rem;
-    border: 3px solid var(--dark-color);
-    border-radius: 8px;
-    font-family: inherit;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
     font-size: 1rem;
-    background-color: #FFFFFF;
-    color: var(--text-dark);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feedback-form input:focus,
-.feedback-form textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+    border-color: #000000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.btn-primary {
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+.submit-button {
+    background-color: #000000;
     color: #FFFFFF;
-    padding: 0.8rem 1.5rem;
     border: none;
-    border-radius: 50px;
+    padding: 1rem;
     font-size: 1rem;
-    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+.submit-button:hover {
+    background-color: #333333;
 }
 
-.btn-secondary {
-    background-color: #FFFFFF;
-    color: var(--primary-color);
-    padding: 0.5rem 1rem;
-    border: 3px solid var(--primary-color);
-    border-radius: 8px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-weight: bold;
-}
-
-.btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: #FFFFFF;
-    transform: scale(1.05);
-}
-
-#feedback-message {
+#form-message {
     text-align: center;
-    color: var(--dark-color);
+    color: #000000;
     font-weight: bold;
-    min-height: 1.5rem;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
-
+/* ===== FOOTER ===== */
 .footer {
-    background: linear-gradient(90deg, var(--dark-color), #1a252f);
-    color: #FFFFFF;
-    text-align: center;
+    background-color: #D9D9D9;
     padding: 2rem;
-    margin-top: 3rem;
-}
-
-.footer p {
-    margin: 0.5rem 0;
+    text-align: center;
+    color: #333333;
+    border-top: 1px solid #CCCCCC;
 }
 
 .footer a {
-    color: var(--accent-color);
+    color: #000000;
     text-decoration: none;
-    transition: color 0.3s ease;
-    font-weight: bold;
 }
 
 .footer a:hover {
-    color: var(--secondary-color);
+    text-decoration: underline;
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
-
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-    .logo {
-        font-size: 1.3rem;
-    }
-
     .nav-links {
         gap: 1rem;
         font-size: 0.9rem;
@@ -385,36 +310,38 @@ body {
         font-size: 1rem;
     }
 
-    .game-embed {
-        height: auto;
-    }
-
-    .game-embed iframe {
-        height: 400px;
-    }
-
-    .tab-content {
+    .info-container {
         grid-template-columns: 1fr;
+    }
+
+    .game-container iframe {
+        height: 300px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
     }
 }
 
 @media (max-width: 480px) {
-    .navbar .container {
+    .nav-container {
         flex-direction: column;
         gap: 1rem;
     }
 
     .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .hero-content h2 {
         font-size: 1.5rem;
     }
 
-    .btn-play {
+    .cta-button,
+    .play-button,
+    .submit-button {
         padding: 0.8rem 1.5rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }

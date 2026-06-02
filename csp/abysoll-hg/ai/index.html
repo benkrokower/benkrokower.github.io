@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Clicker - Fast-Paced Arcade Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Circle Clicker</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-to-play">How to Play</a></li>
+                <li><a href="#game">Play Game</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION / TITLE BANNER -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Circle Clicker</h2>
+            <p>Click 100 circles as fast as you can. Test your speed and accuracy!</p>
+            <a href="#game" class="cta-button">Play Now</a>
+        </div>
+    </section>
+
+    <!-- GAME INFO SECTION -->
+    <section class="game-info">
+        <div class="info-container">
+            <div class="info-card" id="about">
+                <h3>About the Game</h3>
+                <p>Circle Clicker is a fast-paced arcade game where you click 100 circles as they move across the screen. The faster you click and the more accurate you are, the higher your score!</p>
+            </div>
+            <div class="info-card" id="how-to-play">
+                <h3>How to Play</h3>
+                <p><strong>Goal:</strong> Click all 100 circles before time runs out.</p>
+                <ul>
+                    <li>Circles appear randomly on the screen</li>
+                    <li>Click each circle as quickly as possible</li>
+                    <li>Aim for 100% accuracy</li>
+                    <li>Watch your score and accuracy climb!</li>
+                </ul>
+            </div>
+            <div class="info-card" id="game">
+                <h3>High Scores & Challenge</h3>
+                <p>Can you beat the game with perfect accuracy? Try to click all 100 circles without missing a single one!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLAYABLE GAME AREA -->
+    <section class="game-container">
+        <h2>Play Circle Clicker</h2>
+        <div class="game-wrapper">
+            <iframe 
+                src="https://academy.cs.cmu.edu/sharing/moccasinDog215754" 
+                width="800" 
+                height="600" 
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- ABOUT THE DEVELOPER -->
+    <section class="developer">
+        <h2>About the Developer</h2>
+        <div class="dev-content">
+            <p>Hi! I'm a sophomore in high school with a passion for creating games and exploring cybersecurity. Circle Clicker is one of my projects as I continue to develop my skills in game design and web development. I'm excited to share this game with you!</p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2>Feedback & Contact</h2>
+        <p>Enjoyed Circle Clicker? Have feedback or questions? Feel free to reach out!</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2024 Circle Clicker. All rights reserved. | Made with passion by a student developer.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

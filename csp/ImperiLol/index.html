@@ -9,7 +9,6 @@
             padding: 0;
             overflow: hidden; 
             background-color: #C4BEBB;
-            /* Flexbox centers content horizontally and vertically */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,7 +16,6 @@
             width: 100vw;
         }
 
-        /* Positions the button on top of the iframe so it doesn't ruin the centering */
         .nav-button {
             position: absolute;
             top: 10px;
@@ -26,12 +24,23 @@
             font-size: 16px; 
             padding: 10px; 
         }
+          
 
         iframe {
             display: block;
-            width: 100vw;   /* Back to full viewport width */
-            height: 100vh;  /* Back to full viewport height */
-            border: none;  
+            border: none;
+            width:410px;
+            height: 445px;
+        
+        }
+        .rectangle {
+             height:600px;
+             width:540px;
+             background-color: #272929;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             overflow: hidden;
         }
     </style>
 </head>
@@ -39,8 +48,9 @@
      <a href="rules.html" class="nav-button">
         <button style="font-size: inherit; padding: inherit;">View Instructions</button>
     </a>
-
-    <iframe src="https://academy.cs.cmu.edu/sharing/tealHorse218288/embed" allowfullscreen></iframe>
+         <div class="rectangle">
+             <iframe src="https://academy.cs.cmu.edu/sharing/tealHorse218288/embed" allowfullscreen></iframe>
+         </div>
 </body>
 </html>
 

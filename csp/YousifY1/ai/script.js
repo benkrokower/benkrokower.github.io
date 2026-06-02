@@ -1,54 +1,29 @@
-// ============================================
-// HIGH SCORE MANAGEMENT
-// ============================================
+// ===== SCORE TRACKING =====
+// Initialize score from localStorage (saves even after page refresh)
+let score = localStorage.getItem('highFiveScore') ? parseInt(localStorage.getItem('highFiveScore')) : 0;
 
-function updateHighScore(newScore) {
-    let currentScore = localStorage.getItem('highScore') || 0;
-    currentScore = parseInt(currentScore);
-    
-    if (newScore > currentScore) {
-        localStorage.setItem('highScore', newScore);
-        displayHighScore(newScore);
-    }
-}
-
-function displayHighScore(score) {
-    const display = document.getElementById('high-score-display');
-    if (display) {
-        display.textContent = `Best Score: ${score} points`;
-    }
-}
-
-function resetScores() {
-    localStorage.removeItem('highScore');
-    displayHighScore(0);
-    alert('High scores have been reset!');
-}
-
-// Load high score on page load
-window.addEventListener('load', function() {
-    const savedScore = localStorage.getItem('highScore') || 0;
-    displayHighScore(savedScore);
+// Display score when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    updateScoreDisplay();
 });
 
-// ============================================
-// FEEDBACK FORM HANDLING
-// ============================================
+// Increment score when user clicks "I Just Played!"
+function incrementScore() {
+    score++;
+    localStorage.setItem('highFiveScore', score);
+    updateScoreDisplay();
+    showScoreAnimation();
+}
 
-function handleSubmit(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const name = form.querySelector('input[type="text"]').value;
-    const feedback = form.querySelector('textarea').value;
-    
-    // Save feedback to localStorage
-    let allFeedback = JSON.parse(localStorage.getItem('feedback')) || [];
-    allFeedback.push({
-        name: name,
-        message: feedback,
-        date: new Date().toLocaleDateString()
-    });
-    localStorage.setItem('feedback', JSON.stringify(allFeedback));
-    
-    // Show success
+// Update the score display on the page
+function updateScoreDisplay() {
+    document.getElementById('score').textContent = score;
+}
+
+// Show a fun animation when score increases
+function showScoreAnimation() {
+    const scoreElement = document.getElementById('score');
+    scoreElement.style.transform = 'scale(1.2)';
+    setTimeout(() => {
+        scoreElement.style.transform = 'scale(1)';
+    }, 200);

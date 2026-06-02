@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - My CMU Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #004d4d;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* HEADER / NAVIGATION */
+        header {
+            background-color: #003939;
+            padding: 20px 0;
+            border-bottom: 3px solid #1affff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1affff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        /* NAVIGATION BAR */
+        nav {
+            background-color: #002d2d;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #1affff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: 0.3s ease;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+            text-shadow: 0 0 10px #1affff;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* HERO/BANNER SECTION */
+        .banner {
+            background: linear-gradient(135deg, #1affff, #004d4d);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 40px 0;
+            box-shadow: 0 8px 16px rgba(26, 255, 255, 0.2);
+        }
+
+        .banner h2 {
+            font-size: 3em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .banner p {
+            font-size: 1.3em;
+            color: #e0f7fa;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #1affff;
+            color: #004d4d;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(26, 255, 255, 0.4);
+        }
+
+        /* INFO SECTIONS */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .info-card {
+            background-color: #003939;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #1affff;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(26, 255, 255, 0.3);
+        }
+
+        .info-card h3 {
+            color: #1affff;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .info-card p {
+            color: #e0f7fa;
+            font-size: 1em;
+        }
+
+        /* GAME EMBED SECTION */
+        .game-section {
+            background-color: #003939;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .game-section h2 {
+            color: #1affff;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .game-embed {
+            background-color: #002d2d;
+            padding: 30px;
+            border-radius: 8px;
+            border: 3px solid #1affff;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+
+        .game-embed iframe {
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 600px;
+            height: 600px;
+        }
+
+        .game-link {
+            margin-top: 20px;
+        }
+
+        .game-link a {
+            display: inline-block;
+            background-color: #1affff;
+            color: #004d4d;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .game-link a:hover {
+            background-color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* CONTROLS SECTION */
+        .controls-section {
+            background-color: #003939;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+            border: 2px solid #1affff;
+        }
+
+        .controls-section h3 {
+            color: #1affff;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .controls-list {
+            list-style: none;
+        }
+
+        .controls-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #1affff;
+            color: #e0f7fa;
+        }
+
+        .controls-list li:last-child {
+            border-bottom: none;
+        }
+
+        .controls-list strong {
+            color: #1affff;
+        }
+
+        /* ABOUT DEVELOPER SECTION */
+        .about-developer {
+            background-color: #003939;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: center;
+            border: 3px solid #1affff;
+        }
+
+        .about-developer h2 {
+            color: #1affff;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .about-developer p {
+            color: #e0f7fa;
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #002d2d;
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 3px solid #1affff;
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: #1affff;
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #1affff;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .banner h2 {
+                font-size: 2em;
+            }
+
+            .banner p {
+                font-size: 1.1em;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+            }
+
+            .game-embed {
+                padding: 15px;
+            }
+
+            .game-embed iframe {
+                height: 400px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .game-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <h1>🎮 TIC TAC TOE</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About the Game</a>
+        <a href="#how-to-play">How to Play</a>
+        <a href="#game">Play Game</a>
+        <a href="#about-developer">About Developer</a>
+    </nav>
+
+    <div class="container">
+        <!-- HERO BANNER -->
+        <section class="banner">
+            <h2>Master the Classic!</h2>
+            <p>Challenge yourself in the ultimate strategic game of Tic Tac Toe</p>
+            <a href="#game" class="cta-button">Play Now</a>
+        </section>
+
+        <!-- INFO CARDS -->
+        <section class="info-grid" id="about">
+            <div class="info-card">
+                <h3>📋 About the Game</h3>
+                <p>This is the classic 2 player game where X and O take turns filling in squares in the grid. Strategize your moves to get three in a row horizontally, vertically, or diagonally to win!</p>
+            </div>
+
+            <div class="info-card">
+                <h3>🎯 What You'll Love</h3>
+                <p>Simple rules, endless strategy. Whether you're a casual player or a competitive enthusiast, Tic Tac Toe delivers quick, exciting matches that keep you coming back for more!</p>
+            </div>
+
+            <div class="info-card">
+                <h3>⚡ Quick & Engaging</h3>
+                <p>No downloads needed. No complicated mechanics. Just pure, classic gameplay that's been entertaining players for generations. Play anytime, anywhere!</p>
+            </div>
+        </section>
+
+        <!-- HOW TO PLAY -->
+        <section class="controls-section" id="how-to-play">
+            <h3>📖 How to Play</h3>
+            <ul class="controls-list">
+                <li><strong>Players:</strong> 2 players per game (X and O)</li>
+                <li><strong>Goal:</strong> Get three of your symbols in a row (horizontal, vertical, or diagonal)</li>
+                <li><strong>Turns:</strong> Players take turns clicking on empty squares</li>
+                <li><strong>Blocking:</strong> Block your opponent's winning moves strategically</li>
+                <li><strong>Win:</strong> First player to get three in a row wins!</li>
+                <li><strong>Draw:</strong> If all squares are filled with no winner, it's a draw</li>
+            </ul>
+        </section>
+
+        <!-- GAME SECTION -->
+        <section class="game-section" id="game">
+            <h2>🎮 Play the Game!</h2>
+            <div class="game-embed">
+                <iframe src="https://academy.cs.cmu.edu/sharing/floralWhiteAnt256754" allowfullscreen></iframe>
+            </div>
+            <div class="game-link">
+                <p>Can't see the game above? <a href="https://academy.cs.cmu.edu/sharing/floralWhiteAnt256754" target="_blank">Play it here in a new window</a></p>
+            </div>
+        </section>
+
+        <!-- ABOUT DEVELOPER -->
+        <section class="about-developer" id="about-developer">
+            <h2>👨‍💻 About the Developer</h2>
+            <p>Welcome! I'm a student passionate about creating engaging games and interactive experiences. I built this Tic Tac Toe game as part of my computer science journey. Whether you're here to compete or just kill some time, I hope you enjoy! Feel free to challenge a friend and see who reigns supreme!</p>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 My CMU Game Website. All rights reserved.</p>
+        <p>Built with ❤️ at <a href="https://www.cmu.edu/" target="_blank">Carnegie Mellon University</a></p>
+    </footer>
+</body>
+</html>

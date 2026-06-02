@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lando Click - Cheer for Lando Norris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <nav>
+            <div class="logo">🏎️ LANDO CLICK</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-to-play">How to Play</a></li>
+                <li><a href="#developer">Developer</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>🏁 LANDO CLICK 🏁</h1>
+        <p>Cheer for Lando Norris with every click!</p>
+        <iframe src="https://academy.cs.cmu.edu/sharing/mintCreamTurtle796196" 
+                    width="500" 
+                    height="500" 
+                    frameborder="0" 
+                    allow="fullscreen">
+            </iframe>
+    </section>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+        <!-- ABOUT THE GAME -->
+        <section class="content-section" id="about">
+            <div>
+                <h2>About the Game</h2>
+                <p>Welcome to <strong>Lando Click</strong> — a fun, interactive game where you click on Lando Norris's logo to show your support for the McLaren Formula 1 driver!</p>
+                <p>Every click represents your cheers during race weekends. The more you click, the more you celebrate your favorite driver. It's simple, it's fun, and it's all about showing Lando some love!</p>
+            </div>
+            <div style="text-align: center; font-size: 80px;">
+                🎮
+            </div>
+        </section>
+
+        <!-- HOW TO PLAY -->
+        <section class="content-section" id="how-to-play">
+            <div style="text-align: center; font-size: 80px;">
+                ⚙️
+            </div>
+            <div>
+                <h2>How to Play</h2>
+                <p>The rules are simple:</p>
+                <ul>
+                    <li>Click on Lando's logo to cheer for him</li>
+                    <li>See the McLaren team colors light up with your support</li>
+                    <li>Share the game with other F1 fans!</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT THE DEVELOPER -->
+    <section class="about-developer" id="developer">
+        <h2>About the Developer</h2>
+        <p>This website was created by a passionate Formula 1 fan who wanted to build something fun and interactive to celebrate their favorite driver, Lando Norris, and the McLaren Mastercard Formula 1 Team.</p>
+        <div class="developer-info">
+            <p>🎯 Goal: Create an engaging fan experience</p>
+            <p>💡 Passion: Formula 1 Racing & Web Development</p>
+            <p>🏆 Favorite Team: McLaren</p>
+            <p>⭐ Favorite Driver: Lando Norris</p>
+        </div>
+    </section>
+
+    <!-- FEEDBACK SECTION -->
+    <section class="feedback" id="feedback">
+        <h2>Send Us Your Feedback</h2>
+        <form class="feedback-form" onsubmit="handleFeedback(event)">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Feedback:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
+        <p id="feedback-message" style="margin-top: 20px; color: #d0ff00; display: none;"></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Lando Click - A Formula 1 Fan Project</p>
+        <p>Made with 🧡 for Lando Norris and McLaren F1 Team</p>
+        <p>Let's Go Lando! 🏎️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

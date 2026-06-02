@@ -3,92 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The High-Five Game | CMU Game Website</title>
+    <title>The High-Five Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- NAVIGATION HEADER -->
-    <header class="navbar">
-        <div class="container">
-            <h1 class="logo">The High-Five</h1>
-            <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#how-to-play">How to Play</a>
-                <a href="#high-scores">High Scores</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+    <!-- HEADER / NAVIGATION -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">The High-Five</h1>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#how-to-play">How to Play</a></li>
+                    <li><a href="#high-scores">High Scores</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <!-- HERO BANNER -->
     <section class="hero">
         <div class="hero-content">
-            <h2>The High-Five Game</h2>
-            <p>Can you keep the stick figure happy? Make the right choices and avoid upsetting them!</p>
-            <a href="#play-game" class="btn-play">Play Now</a>
+            <h2>The High-Five</h2>
+            <p>Make the stick figure more upset with every high-five!</p>
+            <button class="cta-button" onclick="scrollToGame()">Play Now</button>
         </div>
     </section>
 
-    <!-- GAME INFO TABS -->
-    <section class="info-tabs">
-        <div class="container">
-            <div class="tab-content">
-                <div class="tab">
-                    <h3>📖 About the Game</h3>
-                    <p>The High-Five is an interactive game where your decisions matter. Each choice you make affects the stick figure's mood. Can you keep them happy, or will they leave upset?</p>
-                </div>
-                <div class="tab">
-                    <h3>🎮 How to Play</h3>
-                    <p><strong>Controls:</strong> Click or tap the buttons to make choices. Each decision changes the stick figure's emotion. Try different combinations to discover all outcomes!</p>
-                </div>
-                <div class="tab">
-                    <h3>🏆 High Scores</h3>
-                    <p id="high-score-display">Best Score: 0 points</p>
-                    <button class="btn-secondary" onclick="resetScores()">Reset Scores</button>
-                </div>
+    <!-- GAME INFO CARDS -->
+    <section class="info-section">
+        <div class="info-container">
+            <!-- About the Game -->
+            <div id="about" class="info-card">
+                <h3>About the Game</h3>
+                <p>The High-Five is a fun and interactive game where each high-five makes the stick figure progressively more upset. Can you handle the challenge? See how far you can push the stick figure's emotions!</p>
+            </div>
+
+            <!-- How to Play -->
+            <div id="how-to-play" class="info-card">
+                <h3>How to Play</h3>
+                <p><strong>Controls:</strong></p>
+                <ul>
+                    <li>Click the "High-Five" button to give a high-five</li>
+                    <li>Watch the stick figure's reaction change</li>
+                    <li>Try to reach the highest upset level!</li>
+                </ul>
+            </div>
+
+            <!-- High Scores -->
+            <div id="high-scores" class="info-card">
+                <h3>High Scores</h3>
+                <p id="score-display">Your Current Score: <strong id="score">0</strong></p>
+                <button class="reset-button" onclick="resetScore()">Reset Score</button>
             </div>
         </div>
     </section>
 
     <!-- PLAYABLE GAME AREA -->
-    <section class="game-section" id="play-game">
-        <div class="container">
-            <h2>Play The High-Five</h2>
-            <div class="game-embed">
-                <iframe src="https://academy.cs.cmu.edu/sharing/blueFrog493066" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <p class="game-note">Embedded game above. Having trouble? <a href="https://academy.cs.cmu.edu/sharing/blueFrog493066" target="_blank">Play in a new window</a></p>
+    <section class="game-section">
+        <h2>Play The High-Five</h2>
+        <div class="game-container">
+            <iframe 
+                src="https://academy.cs.cmu.edu/sharing/blueFrog493066" 
+                width="600" 
+                height="400" 
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
         </div>
+        <p class="game-note">Embed your game above. Click the button below to track your plays!</p>
+        <button class="play-button" onclick="incrementScore()">I Just Played!</button>
     </section>
 
     <!-- ABOUT THE DEVELOPER -->
-    <section class="about-developer" id="about">
-        <div class="container">
-            <h2>About the Developer</h2>
-            <p>Hello! I'm a student at Carnegie Mellon University studying game design and interactive media. I created <strong>The High-Five</strong> to explore how player choices can shape emotional storytelling in games.</p>
-            <p>This project taught me about game mechanics, player engagement, and how small interactions can create meaningful experiences.</p>
-        </div>
-    </section>
-
-    <!-- CONTACT & FEEDBACK -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <h2>Share Your Feedback</h2>
-            <form class="feedback-form" onsubmit="handleSubmit(event)">
+    <section id="contact" class="developer-section">
+        <h2>About the Developer</h2>
+        <div class="developer-content">
+            <p>Hi! I created The High-Five as a fun way to explore game design and web development. I'm passionate about building interactive experiences that make people smile.</p>
+            <h3>Get in Touch</h3>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
                 <input type="text" placeholder="Your Name" required>
-                <textarea placeholder="What did you think of the game?" rows="5" required></textarea>
-                <button type="submit" class="btn-primary">Send Feedback</button>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Feedback or Message" rows="5" required></textarea>
+                <button type="submit" class="submit-button">Send Feedback</button>
             </form>
-            <p id="feedback-message"></p>
+            <p id="form-message"></p>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 The High-Five Game. Made with ❤️ at CMU.</p>
-            <p><a href="https://academy.cs.cmu.edu/sharing/blueFrog493066" target="_blank">Original Game Link</a></p>
-        </div>
+        <p>&copy; 2024 The High-Five. All rights reserved. | <a href="https://www.minecraft.net">Inspired by great game design</a></p>
     </footer>
 
     <script src="script.js"></script>
