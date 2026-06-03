@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CMU Game Website</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ADD8E6; /* Light Blue */
+            color: #FFFF00; /* Yellow Text */
+            text-shadow: 1px 1px 0 #000000; /* Black Border */
+            line-height: 1.6;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 50px 20px;
+            border-bottom: 3px solid #000000;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #FFFF00;
+            text-decoration: none;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #000000;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Game Embed Styling */
+        .game-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: 3px solid #000000;
+            border-radius: 10px;
+        }
+
+        /* Screenshots / Images */
+        .screenshots img {
+            max-width: 90%;
+            margin: 10px 0;
+            border: 3px solid #000000;
+            border-radius: 8px;
+        }
+
+        /* High Scores */
+        .high-scores {
+            background-color: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            iframe {
+                width: 100%;
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- About & Inspiration -->
+    <section id="about">
+        <h1>About This Project</h1>
+        <p>My games are part of my fourth creative task and are recreations of <strong>Geometry Dash ship gameplay</strong>.</p>
+
+        <h2>Inspiration</h2>
+        <p>This project was inspired by Geometry Dash, originally made by RobTop. I wanted to recreate the ship flying mechanics with fun challenges.</p>
+
+        <h2>About the Class</h2>
+        <p>This project was completed as part of a creative task in my CMU class. The goal was to explore coding and game design concepts in a hands-on way.</p>
+    </section>
+
+    <!-- Screenshots / Gameplay Explanations -->
+    <section id="screenshots">
+        <h1>Game Screenshots / Explanations</h1>
+        <div class="screenshots">
+            <img src="screenshot1.png" alt="Gameplay Screenshot 1">
+            <img src="screenshot2.png" alt="Gameplay Screenshot 2">
+        </div>
+        <p>There are two variations of the game: a challenge mode where two walls converge from top to bottom, and a survival mode where blocks come from the left side.</p>
+    </section>
+
+    <!-- Playable Game -->
+    <section id="game">
+        <h1>Play My Game</h1>
+        <div class="game-container">
+            <iframe src="https://academy.cs.cmu.edu/sharing/moccasinDog202923" title="Geometry Dash Ship Game" allowfullscreen></iframe>
+        </div>
+        <p><a href="https://academy.cs.cmu.edu/sharing/moccasinDog202923" target="_blank">Open Game in New Tab</a></p>
+    </section>
+
+    <!-- High Scores -->
+    <section id="high-scores">
+        <h1>High Scores</h1>
+        <div class="high-scores">
+            <ul>
+                <li>Player1: 1200</li>
+                <li>Player2: 950</li>
+                <li>Player3: 870</li>
+                <!-- Add dynamic scores later -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Coding Challenges -->
+    <section id="coding-challenges">
+        <h1>Coding Challenges</h1>
+        <p>During this project, I faced several challenges:</p>
+        <ul>
+            <li>Translating gameplay mechanics into code.</li>
+            <li>Embedding playable games smoothly on the page.</li>
+            <li>Maintaining a fun, visually recognizable style.</li>
+        </ul>
+    </section>
+
+</body>
+</html>

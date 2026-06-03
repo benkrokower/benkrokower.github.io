@@ -1,6 +1,6 @@
 # My CMU Game Website Plan
 
-- **Project Title:** Alien Asteroid Arrival
+- **Project Title:** APCSP Antics
 
 ---
 
