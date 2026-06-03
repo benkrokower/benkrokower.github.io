@@ -1,8 +1,9 @@
 # My CMU Game Website Plan
 You must learn and implement, at a minimum, the following tags:
-<TABLE>, <TR>, <TH>, <TD>, <SPAN>, <DIV>, <BR>, <IFRAME>, <FORM>, <INPUT>, 
+<TABLE>, <TR>, <TH>, <TD>, 
+ <DIV>,  <IFRAME>, 
 I have completed:
-<HTML>, <HEAD>, <BODY>, <H1>, <H2>,<P>, <IMG>, <A>, <UL>, <LI>, <OL>, 
+<HTML>, <HEAD>, <BODY>, <H1>, <H2>,<P>, <IMG>, <A>, <UL>, <LI>, <OL>, <FORM>, <INPUT>, <SPAN>, <BR>,
 You must utilize the "style" property on HTML tags in order to implement inline CSS. You only need to do this for 3 tags.
 
 ## Student Information

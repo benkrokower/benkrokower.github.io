@@ -8,10 +8,37 @@ h1 {
     color: beige;
 }
 
+h2 {
+    color: beige;
+}
+
 body {
     background-color: black;
 }
 
 head {
     background-color: black;
+}
+
+li {
+    color: beige;
+    font-size: medium;
+}
+
+ul {
+    color: beige;
+    font-size: medium;
+}
+
+a {
+    font-size: xx-large;
+}
+
+table {
+    color: beige;
+    font-size: xx-large;
+}
+
+form {
+    color: beige;
 }
