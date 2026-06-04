@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER / TITLE -->
+    <header class="header">
+        <h1>🎮 Sorting Game</h1>
+        <p class="tagline">Put blocks in holes and earn points!</p>
+    </header>
+
+    <!-- NAVIGATION / INFO SECTION -->
+    <nav class="info-section">
+        <div class="info-box">
+            <h2>About the Game</h2>
+            <p>Welcome to the Sorting Game! This fun puzzle game challenges you to sort blocks by placing them in the correct holes. The faster you sort, the more points you earn!</p>
+        </div>
+        <div class="info-box">
+            <h2>How to Play</h2>
+            <ul>
+                <li>Drag blocks to match them with holes</li>
+                <li>Each correct match earns you points</li>
+                <li>Complete all blocks to finish the level</li>
+                <li>Try to beat your high score!</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- USERNAME SECTION -->
+    <section class="username-section">
+        <label for="username">Enter Your Username:</label>
+        <input type="text" id="username" placeholder="Your name here...">
+        <button id="startBtn">Start Game</button>
+    </section>
+
+    <!-- PLAYABLE GAME AREA -->
+    <section class="game-area">
+        <iframe src="https://academy.cs.cmu.edu/exercise/3062/" title="CMU Sorting Game"></iframe>
+    </section>
+
+    <!-- CELEBRATION MESSAGE (hidden at first) -->
+    <section class="celebration" id="celebration">
+        <h2>🎉 Congratulations! 🎉</h2>
+        <p id="celebrationMessage">Great job sorting those blocks!</p>
+    </section>
+
+    <!-- ABOUT THE DEVELOPER -->
+    <section class="developer-section">
+        <h2>About the Developer</h2>
+        <p>This website was created to showcase the fun and engaging Sorting Game from Carnegie Mellon University. Have fun playing!</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; This game is royalty-free and created by Carnegie Mellon University.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

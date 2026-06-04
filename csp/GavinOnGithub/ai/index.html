@@ -1,11 +1,11 @@
-<<<<<<< HEAD
-<!DOCTYPE HTML>
 <html>
-	<body>
-		<p><a href="/human/index.html">Human Website</a></p>
-		<p><a href="/ai/index.html">AI Website</a></p>
-	</body>
-=======
+<head>
+</head>
+
+<body>
+<h1>Hello-World!</h1>
+<body>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,28 +24,6 @@
             background: linear-gradient(135deg, #F79400 0%, #D4C920 100%);
             color: #FFFFFF;
             min-height: 100vh;
-        }
-
-        /* Top Link Banner */
-        .top-banner {
-            background: #333;
-            text-align: center;
-            padding: 15px 20px;
-            border-bottom: 3px solid #FC8181;
-        }
-
-        .top-banner a {
-            color: #FFFFFF;
-            text-decoration: none;
-            font-size: 1.1em;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-        }
-
-        .top-banner a:hover {
-            color: #F79400;
         }
 
         /* Header / Title Banner */
@@ -211,6 +189,33 @@
             text-transform: uppercase;
         }
 
+        /* Screenshot Gallery */
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .screenshot-placeholder {
+            background: #D9D9D9;
+            border-radius: 12px;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #FFFFFF;
+            color: #F79400;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-placeholder:hover {
+            transform: scale(1.03);
+        }
+
         /* Features List */
         .features-list {
             list-style: none;
@@ -229,6 +234,66 @@
             position: absolute;
             left: 0;
             font-size: 1.3em;
+        }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: 3px solid #FFFFFF;
+            background: rgba(255,255,255,0.9);
+            font-size: 1em;
+            color: #333;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #F79400;
+            box-shadow: 0 0 10px rgba(247, 148, 0, 0.5);
+        }
+
+        .submit-btn {
+            background: #FFFFFF;
+            color: #FC8181;
+            padding: 15px 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .submit-btn:hover {
+            background: #F79400;
+            color: #FFFFFF;
+            transform: scale(1.05);
         }
 
         /* Footer */
@@ -293,11 +358,6 @@
 </head>
 <body>
 
-    <!-- Top Banner Link -->
-    <div class="top-banner">
-        <a href="human.html">My Non-AI Website</a>
-    </div>
-
     <!-- Header / Title Banner -->
     <header class="header">
         <h1>🏜️ Desert Journey 🏜️</h1>
@@ -309,6 +369,8 @@
         <a href="#about">About</a>
         <a href="#how-to-play">How to Play</a>
         <a href="#play">Play Now</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <!-- Main Content -->
@@ -328,7 +390,7 @@
                 <li>Gather resources to upgrade your tools</li>
                 <li>Battle through 10 challenging levels</li>
                 <li>Upgrade weapons, armor, and gear</li>
-                <li>Face the final boss on Level 10!</li>
+                <li>Face thefinal boss on Level 10!</li>
             </ul>
         </section>
 
@@ -384,6 +446,56 @@
             <a href="https://academy.cs.cmu.edu/sharing/graySnake500990" class="play-button" target="_blank">🎮 Open Full Screen</a>
         </section>
 
+        <!-- Screenshots Section -->
+        <section id="screenshots" class="section">
+            <h2>📸 Gameplay Screenshots</h2>
+            <p>Check out these epic moments from the desert battlefield!</p>
+            
+            <div class="screenshot-grid">
+                <div class="screenshot-placeholder">
+                    [Screenshot 1]<br>Level 1 - The Desert Entrance
+                </div>
+                <div class="screenshot-placeholder">
+                    [Screenshot 2]<br>Combat in Action
+                </div>
+                <div class="screenshot-placeholder">
+                    [Screenshot 3]<br>Upgrading Your Gear
+                </div>
+                <div class="screenshot-placeholder">
+                    [Screenshot 4]<br>The Final Boss Battle
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 20px; font-style: italic;">Replace these placeholders with actual screenshots from your game!</p>
+        </section>
+
+        <!-- Contact / Feedback Section -->
+        <section id="contact" class="section">
+            <h2>📧 Contact & Feedback</h2>
+            <p>Have questions, found a bug, or just want to share your high score? I'd love to hear from you! Fill out the form below:</p>
+            
+            <div class="contact-form">
+                <form onsubmit="event.preventDefault(); alert('Thanks for your message! (This is a demo form)');">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Bug report, feedback, or question">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me what you think about the game!" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message 🚀</button>
+                </form>
+            </div>
+        </section>
+
     </div>
 
     <!-- Footer -->
@@ -393,11 +505,13 @@
         <div class="footer-links">
             <a href="#about">About</a>
             <a href="#play">Play</a>
+            <a href="#contact">Contact</a>
             <a href="https://academy.cs.cmu.edu/sharing/graySnake500990" target="_blank">CMU Game Page</a>
         </div>
         <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">© 2026 A Turn Based Attack Game. All rights reserved.</p>
     </footer>
 
 </body>
->>>>>>> 03221a034c7cda1e76cafc20fdb7297f47e59936
+</html>
+ 
 </html>

@@ -45,18 +45,56 @@
 
         .plus-dpad h1 b {
             position: absolute;
-            left: calc(50vw - 270px - 45px); 
+            left: calc((50vw - 270px) / 2); 
             top: 50%;
             transform: translate(-50%, -50%);
             z-index: 10;
-            color: #808080; 
-            font-size: 90px; 
+            color: #8B939C; 
+            font-size: 200px; 
             font-family: "Courier New", Courier, monospace; 
             font-weight: bold;
             user-select: none;
-            text-shadow: 1px 1px 0px #3d4040;
+            text-shadow: 2px 2px 0px #5F666D;
             margin: 0; 
+            display: block;
+            line-height: 140px; 
+            height: 140px;
+            width: 140px;
+            text-align: center;
         }
+        
+         .gba-buttons {
+            position: absolute;
+            right: calc((50vw - 270px) / 2);
+            top: 50%;
+            transform: translate(50%, -50%) rotate(-15deg);
+            z-index: 10;
+            display: flex;
+            gap: 32px; 
+        }
+
+
+         .gba-buttons h2 i {
+            box-sizing: border-box;
+            width: 70px;
+            height: 70px;
+            background-color: #8B939C; 
+            color: #5F666D; 
+            border-radius: 50%; 
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            font-style: normal; 
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 32px;
+            user-select: none;
+            box-shadow: 2px 2px 0px #4e5359; 
+            margin: 0;
+        }
+        
         
     </style>
 </head>
@@ -67,7 +105,11 @@
     <a class="plus-dpad">
         <h1><b>+</b></h1>
     </a> 
-        
+    <div class="gba-buttons">
+        <h2><i>B</i></h2>
+        <h2><i>A</i></h2>
+    </div>
+
     <div class="rectangle">
         <iframe src="https://academy.cs.cmu.edu/sharing/tealHorse218288/embed" allowfullscreen></iframe>
     </div>
