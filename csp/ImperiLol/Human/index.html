@@ -41,8 +41,34 @@
              align-items: center;
              justify-content: center;
              overflow: hidden;
+             position: relative;
         }
+        .gba-logo-text {
+            color: #8B939C; /* Matches your authentic light grey */
+            font-family: 'Arial Black', Gadget, sans-serif;
+            font-size: 15px;
+            font-weight: 900;
+            font-style: italic; /* Mimics the classic fast forward forward slant */
+            letter-spacing: 2px; /* Spaces out the letters nicely */
+            text-transform: uppercase;
+            margin-top: 20px; /* Pushes the text safely below the iframe */
+            user-select: none;
+            opacity: 0.8;
 
+            position: absolute;
+            bottom: 28px; /* Places the baseline exactly in the middle of the remaining space */
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+        }
+        .gba-logo-text span {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: #5F666D; 
+            margin-left: 4px;
+        }
         .plus-dpad h1 b {
             position: absolute;
             left: calc((50vw - 270px) / 2); 
@@ -50,17 +76,17 @@
             transform: translate(-50%, -50%);
             z-index: 10;
             color: #8B939C; 
-            font-size: 200px; 
+            font-size: 300px; 
             font-family: "Courier New", Courier, monospace; 
             font-weight: bold;
             user-select: none;
-            text-shadow: 2px 2px 0px #5F666D;
+            text-shadow: none;
             margin: 0; 
-            display: block;
-            line-height: 140px; 
-            height: 140px;
-            width: 140px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+            width: 500px;
         }
         
          .gba-buttons {
@@ -112,6 +138,7 @@
 
     <div class="rectangle">
         <iframe src="https://academy.cs.cmu.edu/sharing/tealHorse218288/embed" allowfullscreen></iframe>
+        <div class="gba-logo-text">Collatz Concordia</div>
     </div>
 </body>
 </html>

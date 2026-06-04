@@ -4,7 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorting Game</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* GENERAL STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #E6D7F0; /* Lavender */
+            color: #000000; /* Black text */
+            line-height: 1.6;
+        }
+
+        /* HEADER / TITLE */
+        .header {
+            background-color: #FFB6D9; /* Light pink */
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        /* INFO SECTION */
+        .info-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+
+        .info-box {
+            background-color: #D3D3D3; /* Light gray */
+            padding: 20px;
+            border-radius: 10px;
+            width: 45%;
+            min-width: 250px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box h2 {
+            color: #FFB6D9; /* Light pink accent */
+            margin-bottom: 15px;
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+        }
+
+        .info-box li {
+            margin-bottom: 8px;
+        }
+
+        /* USERNAME SECTION */
+        .username-section {
+            background-color: #FFB6D9; /* Light pink */
+            padding: 30px;
+            text-align: center;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .username-section label {
+            font-size: 1.1em;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .username-section input {
+            padding: 10px 15px;
+            font-size: 1em;
+            border: 2px solid #000;
+            border-radius: 5px;
+            margin-right: 10px;
+            width: 200px;
+        }
+
+        .username-section button {
+            padding: 10px 30px;
+            font-size: 1em;
+            background-color: #D3D3D3; /* Light gray */
+            border: 2px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .username-section button:hover {
+            background-color: #E6D7F0; /* Lavender on hover */
+            transform: scale(1.05);
+        }
+
+        /* GAME AREA */
+        .game-area {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #F5F5F5;
+        }
+
+        .game-area iframe {
+            width: 90%;
+            max-width: 1000px;
+            height: 600px;
+            border: 3px solid #FFB6D9;
+            border-radius: 10px;
+        }
+
+        /* CELEBRATION SECTION (hidden by default) */
+        .celebration {
+            display: none;
+            background-color: #FFB6D9; /* Light pink */
+            padding: 40px;
+            text-align: center;
+            margin: 20px;
+            border-radius: 10px;
+            animation: bounce 0.6s;
+        }
+
+        .celebration h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .celebration p {
+            font-size: 1.2em;
+        }
+
+        /* BOUNCE ANIMATION */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* DEVELOPER SECTION */
+        .developer-section {
+            background-color: #D3D3D3; /* Light gray */
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .developer-section h2 {
+            color: #FFB6D9; /* Light pink accent */
+            margin-bottom: 15px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: #FFB6D9; /* Light pink */
+            padding: 20px;
+            text-align: center;
+            color: #000;
+            margin-top: 40px;
+            border-top: 3px solid #D3D3D3;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .info-section {
+                flex-direction: column;
+            }
+
+            .info-box {
+                width: 100%;
+            }
+
+            .username-section input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .game-area iframe {
+                height: 400px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER / TITLE -->
@@ -59,6 +252,37 @@
         <p>&copy; This game is royalty-free and created by Carnegie Mellon University.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Get the username input and start button
+        const usernameInput = document.getElementById('username');
+        const startBtn = document.getElementById('startBtn');
+        const celebrationSection = document.getElementById('celebration');
+        const celebrationMessage = document.getElementById('celebrationMessage');
+
+        // When the Start Game button is clicked
+        startBtn.addEventListener('click', function() {
+            const username = usernameInput.value.trim();
+            
+            if (username === '') {
+                alert('Please enter a username to start!');
+                return;
+            }
+            
+            // Update the celebration message with the username
+            celebrationMessage.textContent = `Great job, ${username}! You sorted all the blocks!`;
+            
+            console.log(`${username} started the game!`);
+        });
+
+        // Function to show celebration
+        function showCelebration() {
+            celebrationSection.style.display = 'block';
+        }
+
+        // Function to hide celebration
+        function hideCelebration() {
+            celebrationSection.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
