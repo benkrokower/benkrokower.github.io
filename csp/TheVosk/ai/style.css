@@ -1,0 +1,358 @@
+/* ===========================
+   style.css — The Cybird on the Run
+   CMU Game Showcase Page
+   =========================== */
+
+/* --- CSS Variables --- */
+:root {
+  --bg: #0d0d0d;
+  --surface: #1a1a1a;
+  --accent: #fb972e;
+  --accent-dark: #e05c00;
+  --text: #f0ece4;
+  --muted: #888888;
+  --border: #2e2e2e;
+  --font-display: 'Press Start 2P', monospace;
+  --font-body: 'Barlow', sans-serif;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* --- Navigation --- */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(13, 13, 13, 0.95);
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  z-index: 999;
+  backdrop-filter: blur(6px);
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* --- Hero --- */
+.hero {
+  padding-top: 120px !important;
+}
+
+.hero-tag {
+  font-family: var(--font-display);
+  font-size: 0.55rem;
+  color: var(--accent);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 4vw, 2.8rem);
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 20px;
+  text-shadow: 0 0 30px rgba(251, 151, 46, 0.4);
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 36px;
+}
+
+.hero-sub a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #0d0d0d;
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  padding: 14px 28px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+
+.cta-btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+/* --- Sections --- */
+.section {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 70px 30px;
+}
+
+.alt-section {
+  background: var(--surface);
+  max-width: 100%;
+  padding: 70px 0;
+}
+
+.alt-section > * {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.highlight {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* --- iframe Embed --- */
+.iframe-wrapper {
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 40px rgba(251, 151, 46, 0.2);
+  max-width: 660px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.iframe-wrapper iframe {
+  display: block;
+  max-width: 100%;
+}
+
+.ext-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ext-link:hover {
+  text-decoration: underline;
+}
+
+/* --- Two Column Layout --- */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* --- Lists --- */
+ol, ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+li {
+  margin-bottom: 10px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+kbd {
+  background: var(--border);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 2px 7px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+}
+
+/* --- Table --- */
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 14px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  color: var(--accent);
+  letter-spacing: 2px;
+  background: var(--surface);
+}
+
+td a {
+  color: var(--accent);
+}
+
+tr:hover td {
+  background: rgba(251, 151, 46, 0.05);
+  transition: background 0.2s;
+}
+
+/* --- Form --- */
+.form-wrap {
+  max-width: 560px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"] {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px 14px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: var(--accent);
+}
+
+input[type="range"] {
+  accent-color: var(--accent);
+  width: 200px;
+  vertical-align: middle;
+}
+
+#rating-display {
+  margin-left: 12px;
+  font-size: 1rem;
+}
+
+/* --- Footer --- */
+footer {
+  background: #111;
+  border-top: 2px solid var(--border);
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer p {
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.muted {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* --- Responsive --- */
+@media (max-width: 680px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  #navbar {
+    padding: 12px 20px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+}

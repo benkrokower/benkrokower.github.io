@@ -8,7 +8,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden; 
-            background-color: #C4BEBB;
+            background-color: #6B4BA3;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,17 +24,7 @@
             font-size: 16px; 
             padding: 10px; 
         }
-        
-
-         .fun-button {
-            position: absolute;
-            top: 10px;
-            left: 400px;
-            z-index: 10;
-            font-size: 16px; 
-            padding: 10px; 
-        }
-
+ 
         iframe {
             display: block;
             border: none;
@@ -47,24 +37,40 @@
              width:540px;
              background-color: #272929;
              display: flex;
+             flex-direction: column;
              align-items: center;
              justify-content: center;
              overflow: hidden;
         }
+
+        .plus-dpad h1 b {
+            position: absolute;
+            left: calc(50vw - 270px - 45px); 
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            color: #808080; 
+            font-size: 90px; 
+            font-family: "Courier New", Courier, monospace; 
+            font-weight: bold;
+            user-select: none;
+            text-shadow: 1px 1px 0px #3d4040;
+            margin: 0; 
+        }
+        
     </style>
 </head>
 <body>
      <a href="rules.html" class="nav-button">
         <button style="font-size: inherit; padding: inherit;">View Instructions</button>
     </a>
-    <a href="grokhowdoidothis.html" class="fun-button" target="_blank">
-        <button style="font-size: inherit; padding: inherit;">Ai Site, just please enable popups</button>
-    </a>
-
-
-         <div class="rectangle">
-             <iframe src="https://academy.cs.cmu.edu/sharing/tealHorse218288/embed" allowfullscreen></iframe>
-         </div>
+    <a class="plus-dpad">
+        <h1><b>+</b></h1>
+    </a> 
+        
+    <div class="rectangle">
+        <iframe src="https://academy.cs.cmu.edu/sharing/tealHorse218288/embed" allowfullscreen></iframe>
+    </div>
 </body>
 </html>
 

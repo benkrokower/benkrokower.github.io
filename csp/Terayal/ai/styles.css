@@ -1,0 +1,135 @@
+/* GENERAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebd894;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* HEADER / NAVIGATION */
+header {
+    background-color: #b31d15;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #ebd894;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ebd894;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #5e36a8;
+}
+
+/* HERO SECTION */
+#hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #5e36a8;
+}
+
+#hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    color: #ebd894;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* MAIN SECTIONS */
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+section h2 {
+    color: #b31d15;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+section h3 {
+    color: #5e36a8;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* GAME EMBED */
+#game {
+    text-align: center;
+}
+
+#game iframe {
+    border: 3px solid #b31d15;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+/* BUTTONS */
+a {
+    display: inline-block;
+    background-color: #b31d15;
+    color: #ebd894;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #5e36a8;
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    background-color: #b31d15;
+    color: #ebd894;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #hero p {
+        font-size: 18px;
+    }
+    
+    section h2 {
+        font-size: 24px;
+    }
+}
