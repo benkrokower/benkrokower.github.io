@@ -1,0 +1,8 @@
+html {
+    background-color: aqua;
+}
+body.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
